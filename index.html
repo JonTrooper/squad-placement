@@ -5,9 +5,10 @@
         <meta property="og:description" content="A simple questionnaire that determines which speciality squad you belong in within the Shock Army.">
         <meta property="og:image" content="https://i.imgur.com/Jhs6ObC.png">
         <link href="https://fonts.googleapis.com/css2?family=Koulen&family=Roboto:wght@500&display=swap" rel="stylesheet">
+        <link rel="stylesheet" href="style.css">
         <style type="text/css">
             body{
-                background-image: url("https://i.imgur.com/Ugxch1o.png");
+                background-image: url("https://i.imgur.com/rxueGpJ.png");
                 background-repeat: no-repeat;
                 background-position-y: bottom;
                 background-attachment: fixed;
@@ -39,19 +40,16 @@
                 font-size: 1.5em;
                 padding-left: 25px;
                 padding-right: 25px;
-                padding-top: 5px;
-                padding-bottom: 5px;
-                background-color: #21791c;
-                border-color: rgba(141, 255, 156, 0.274);
-                border-width: 1px;
-                border-radius: 10px;
-                text-transform: uppercase;
-                color: #022e00;
+                background-color: #1e1f22;
+                border-color: #64c865;
+                border-width: 3px;
+                border-radius: 0px;
+                color: #64c865;
                 font-family: 'Roboto', sans-serif;
                 transition-duration: 0.3s;
             }
             .button:hover{
-                background-color: #349c2f;
+                background-color: #284b2a;
             }
             #questionBox{
                 width: 80%;
@@ -64,45 +62,6 @@
                 font-size: 1.9em;
                 color: #E1C16E;
             }
-            #answer1{background-color: rgba(46, 46, 46, 0.5);width: 100%;border-radius: 6px;padding: 3px;
-                margin-bottom: 10px;font-family: 'Roboto', sans-serif;font-size: 1.2em;transition-duration: 0.3s;}
-            #answer1:hover{background-color: rgba(82, 82, 82, 0.5);}
-            #answer2{background-color: rgba(46, 46, 46, 0.5);width: 100%;border-radius: 6px;padding: 3px;
-                margin-bottom: 10px;font-family: 'Roboto', sans-serif;font-size: 1.2em;transition-duration: 0.3s;}
-            #answer2:hover{background-color: rgba(82, 82, 82, 0.5);}
-            #answer3{background-color: rgba(46, 46, 46, 0.5);width: 100%;border-radius: 6px;padding: 3px;
-                margin-bottom: 10px;font-family: 'Roboto', sans-serif;font-size: 1.2em;transition-duration: 0.3s;}
-                #answer3:hover{background-color: rgba(82, 82, 82, 0.5);}
-                #answer4{background-color: rgba(46, 46, 46, 0.5);width: 100%;border-radius: 6px;padding: 3px;
-                margin-bottom: 10px;font-family: 'Roboto', sans-serif;font-size: 1.2em;transition-duration: 0.3s;}
-                #answer4:hover{background-color: rgba(82, 82, 82, 0.5);}
-                #answer5{background-color: rgba(46, 46, 46, 0.5);width: 100%;border-radius: 6px;padding: 3px;
-                margin-bottom: 10px;font-family: 'Roboto', sans-serif;font-size: 1.2em;transition-duration: 0.3s;}
-                #answer5:hover{background-color: rgba(82, 82, 82, 0.5);}
-            #answer6{background-color: rgba(46, 46, 46, 0.5);width: 100%;border-radius: 6px;padding: 3px;
-                margin-bottom: 10px;font-family: 'Roboto', sans-serif;font-size: 1.2em;transition-duration: 0.3s;}
-            #answer6:hover{background-color: rgba(82, 82, 82, 0.5);}
-            #answer7{background-color: rgba(46, 46, 46, 0.5);width: 100%;border-radius: 6px;padding: 3px;
-                margin-bottom: 10px;font-family: 'Roboto', sans-serif;font-size: 1.2em;transition-duration: 0.3s;}
-            #answer7:hover{background-color: rgba(82, 82, 82, 0.5);}
-            #answer8{background-color: rgba(46, 46, 46, 0.5);width: 100%;border-radius: 6px;padding: 3px;
-                margin-bottom: 10px;font-family: 'Roboto', sans-serif;font-size: 1.2em;transition-duration: 0.3s;}
-            #answer8:hover{background-color: rgba(82, 82, 82, 0.5);}
-            #answer9{background-color: rgba(46, 46, 46, 0.5);width: 100%;border-radius: 6px;padding: 3px;
-                margin-bottom: 10px;font-family: 'Roboto', sans-serif;font-size: 1.2em;transition-duration: 0.3s;}
-            #answer9:hover{background-color: rgba(82, 82, 82, 0.5);}
-            #answer10{background-color: rgba(46, 46, 46, 0.5);width: 100%;border-radius: 6px;padding: 3px;
-                margin-bottom: 10px;font-family: 'Roboto', sans-serif;font-size: 1.2em;transition-duration: 0.3s;}
-            #answer10:hover{background-color: rgba(82, 82, 82, 0.5);}
-            #answer11{background-color: rgba(46, 46, 46, 0.5);width: 100%;border-radius: 6px;padding: 3px;
-                margin-bottom: 10px;font-family: 'Roboto', sans-serif;font-size: 1.2em;transition-duration: 0.3s;}
-            #answer11:hover{background-color: rgba(82, 82, 82, 0.5);}
-            #answer12{background-color: rgba(46, 46, 46, 0.5);width: 100%;border-radius: 6px;padding: 3px;
-                margin-bottom: 10px;font-family: 'Roboto', sans-serif;font-size: 1.2em;transition-duration: 0.3s;}
-            #answer12:hover{background-color: rgba(82, 82, 82, 0.5);}
-            #answer13{background-color: rgba(46, 46, 46, 0.5);width: 100%;border-radius: 6px;padding: 3px;
-                margin-bottom: 10px;font-family: 'Roboto', sans-serif;font-size: 1.2em;transition-duration: 0.3s;}
-            #answer13:hover{background-color: rgba(82, 82, 82, 0.5);}
             hr {
                 border: 0;
                 height: 1px;
