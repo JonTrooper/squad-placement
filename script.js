@@ -165,22 +165,86 @@ var question4;
             var guardians = document.getElementById("guardians");
             var marksmen = document.getElementById("marksmen");
             var antiArmor = document.getElementById("antiArmor");
-            start.style.display = "none";
-            questions.style.display = "none";
-            var finalAnswers = [question1, question2, question3, question4];
-            var squadFinale;
-            if(finalAnswers.includes("A", 3)){
-                squadFinale = "Marksmen";
-                marksmen.style.display = "block";
-            } else if(finalAnswers.includes("B", 3)){
-                squadFinale = "Guardians";
-                guardians.style.display = "block";
-            } else {
-                squadFinale = "Anti-Armor";
-                antiArmor.style.display = "block";
-            }
 
-            document.getElementById("squad").innerHTML = squadFinale;
+            if (
+                answer1.style.backgroundColor === "green" ||
+                answer2.style.backgroundColor === "green" ||
+                answer3.style.backgroundColor === "green" 
+                ){
+                    if(
+                        answer4.style.backgroundColor === "green" ||
+                        answer5.style.backgroundColor === "green" ||
+                        answer6.style.backgroundColor === "green" 
+                    ){
+                        if(
+                            answer7.style.backgroundColor === "green" ||
+                            answer8.style.backgroundColor === "green" ||
+                            answer9.style.backgroundColor === "green" 
+                        ){
+                            if(
+                                answer10.style.backgroundColor === "green" ||
+                                answer11.style.backgroundColor === "green" ||
+                                answer12.style.backgroundColor === "green" ||
+                                answer13.style.backgroundColor === "green" 
+                            ){
+                                let a = 0;
+                                let b = 0;
+                                let c = 0;
+                                var finalAnswers = [question1, question2, question3, question4];
+                                for (let i = 0; i < finalAnswers.length; i++) {
+                                    if(finalAnswers[i] === "A"){
+                                        a++;
+                                    }
+                                    if(finalAnswers[i] === "B"){
+                                        b++;
+                                    }
+                                    if(finalAnswers[i] === "C"){
+                                        c++;
+                                    }
+                                }
+                                if (a >= 3){
+                                    marksmen.style.display = "block";
+                                    questions.style.display = "none";
+                                }
+                                if (b >= 3){
+                                    guardians.style.display = "block";
+                                    questions.style.display = "none";
+                                }
+                                if (c >= 3){
+                                    antiArmor.style.display = "block";
+                                    questions.style.display = "none";
+                                }
+                                document.getElementById("squadFinalA").innerHTML = a;
+                                document.getElementById("squadFinalB").innerHTML = b;
+                                document.getElementById("squadFinalC").innerHTML = c;
+                                document.getElementById("squadFinalT").innerHTML = finalAnswers;
+                            }
+                        }
+                    }
+                }
+
+
+
+            //var squadFinale;
+            /*
+            if(finalAnswers.includes("A", 4)){
+                //squadFinale = "Marksmen";
+                marksmen.style.display = "block";
+            } else if(finalAnswers.includes("B", 4)){
+                //squadFinale = "Guardians";
+                guardians.style.display = "block";
+            } else if(finalAnswers.includes("C", 4)){
+                //squadFinale = "Anti-Armor";
+                antiArmor.style.display = "block";
+            } else if(finalAnswers.includes("A", 1) && finalAnswers.includes("B", 1)){
+                marksmen.style.display = "block";
+                guardians.style.display = "block";
+            }
+*/
+
+
+
+
 
 
         }

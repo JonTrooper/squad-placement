@@ -10,7 +10,7 @@
             body{
                 background-image: url("https://i.imgur.com/rxueGpJ.png");
                 background-repeat: no-repeat;
-                background-position-y: bottom;
+                background-position-y: center;
                 background-attachment: fixed;
                 color: white;
                 font-family: 'Koulen', cursive;
@@ -21,12 +21,12 @@
                 left: 0;
                 width: 100%;
                 height: 100%;
-                box-shadow: 0 0 200px rgba(0,0,0,0.9) inset;
+                box-shadow: 0 0 200px rgba(0,0,0,0.85) inset;
                 z-index: -1;
             }
             #startTitle{
                 position: relative;
-                margin-top: 10%;
+                margin-top: 5%;
                 text-align: center;
                 font-size: 3em;
                 color: #E1C16E;
@@ -57,10 +57,14 @@
                 margin:auto;
                 text-align: center;
                 display: none;
+                text-shadow: 2px 2px 3px #000000;
+                font-family: 'Roboto', sans-serif;
+                font-size: 1.2em;
             }
             .question{
-                font-size: 1.9em;
+                font-size: 1.7em;
                 color: #E1C16E;
+                font-family: 'Koulen', cursive;
             }
             hr {
                 border: 0;
@@ -86,6 +90,12 @@
                 display:none;
                 background-image: linear-gradient(to right, rgba(0, 0, 0, 0), #42462a, rgba(0, 0, 0, 0));
             }
+            .layout {
+                width: 100%;
+                display: flex;
+                gap: 10px;
+            }
+            .grow1 { flex-grow: 1; }
         </style>
     </head>
     <body>
@@ -100,61 +110,85 @@
             <div class="question">
                 During Conquest War, what do you focus on most?
             </div>
-            <span id="answers">
-            <div id="answer1" onclick="answer1Button()">
-                My K/D, that's all that matters, simple as.
-            </div>
-            <div id="answer2" onclick="answer2Button()">
-                Pushing and capturing enemy territories.
-            </div>
-            <div id="answer3" onclick="answer3Button()">
-                Destroying enemy tanks and helicopters.
-            </div>
-            </span>
+            <section class="layout">
+                <div id="answer1" onclick="answer1Button()">
+                    <img src="https://i.imgur.com/vHTKsls.png"><br>
+                    My K/D, that's all that matters, simple as.
+                </div>
+                <div id="answer2" onclick="answer2Button()">
+                    <img src="https://i.imgur.com/I5UQhXB.png"><br>
+                    Pushing and capturing enemy territories.
+                </div>
+                <div id="answer3" onclick="answer3Button()">
+                    <img src="https://i.imgur.com/aqoieD8.png"><br>
+                    Destroying enemy tanks and helicopters.
+                </div>
+            </section>
             <hr>
             <div class="question">
                 During Peacetime, which of these activities would you prefer doing?
             </div>
+            <section class="layout">
             <div id="answer4" onclick="answer4Button()">
-                Recruiting new members to the regiment & taking part in trainings.
+                <img src="https://i.imgur.com/NyaTsLN.png"><br>
+                Recruiting new members & taking part in trainings.
             </div>
             <div id="answer5" onclick="answer5Button()">
+                <img src="https://i.imgur.com/NcadVOG.png"><br>
                 Patrolling outside base, protecting the faction from potential threats.
             </div>
             <div id="answer6" onclick="answer6Button()">
+                <img src="https://i.imgur.com/uWxY1Qy.png"><br>
                 Building FOBs and planning ahead for the next War.
             </div>
+        </section>
             <hr>
             <div class="question">
                 If you see an enemy tank or helicopter, what would you do?
             </div>
+            
+            <section class="layout">
             <div id="answer7" onclick="answer7Button()">
+                <img src="https://i.imgur.com/tkigEW7.png"><br>
                 Run away and let others deal with it.
             </div>
             <div id="answer8" onclick="answer8Button()">
+                <img src="https://i.imgur.com/bT6KXyz.png"><br>
                 Alert its position in comms and continue on your objective.
             </div>
             <div id="answer9" onclick="answer9Button()">
+                <img src="https://i.imgur.com/9B0DdED.png"><br>
                 Alert its position and directly engage it.
             </div>
+            
+        </section>
             <hr>
             <div class="question">
                 Which of these shock army jobs would you prefer playing?
             </div>
+            
+            
+            <section class="layout">
             <div id="answer10" onclick="answer10Button()">
+                <img src="https://i.imgur.com/vpjSexE.png"><br>
                 Anti-Tank
             </div>
             <div id="answer11" onclick="answer11Button()">
+                <img src="https://i.imgur.com/3SEehay.png"><br>
                 Marksman
             </div>
             <div id="answer12" onclick="answer12Button()">
+                <img src="https://i.imgur.com/tWZk4mh.png"><br>
                 Medic
             </div>
             <div id="answer13" onclick="answer13Button()">
+                <img src="https://i.imgur.com/iX4qZSU.png"><br>
                 Autorifleman
             </div>
+            
+        </section>
             <hr>
-            <button class="button" onclick="endTest()">Submit</button>
+            <button class="button" id="submit" onclick="endTest()">Submit</button>
 
         </div>
         <div id="finalSquad">
@@ -189,6 +223,15 @@
                 <hr>
             </div>
         </div>
+
+        <div id="squadFinalA">None</div>
+
+        <div id="squadFinalB">None</div>
+
+        <div id="squadFinalC">None</div>
+
+        <div id="squadFinalT">None</div>
+
         <script src="script.js"></script>
     </body>
 </html>
