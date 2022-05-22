@@ -95,6 +95,7 @@
                 margin-bottom: 10px;
                 transition-duration: 0.3s;
                 width:200px;
+                flex-grow: 1;
             }
             #answer10:hover{background-color: rgba(82, 82, 82, 0.5);}
             #answer11{
@@ -104,6 +105,7 @@
                 margin-bottom: 10px;
                 transition-duration: 0.3s;
                 width:200px;
+                flex-grow: 1;
             }
             #answer11:hover{background-color: rgba(82, 82, 82, 0.5);}
             #answer12{
@@ -113,6 +115,7 @@
                 margin-bottom: 10px;
                 transition-duration: 0.3s;
                 width:200px;
+                flex-grow: 1;
             }
             #answer12:hover{background-color: rgba(82, 82, 82, 0.5);}
             #answer13{
@@ -121,5 +124,6 @@
                 margin-bottom: 10px;
                 transition-duration: 0.3s;
                 width:200px;
+                flex-grow: 1;
             }
             #answer13:hover{background-color: rgba(82, 82, 82, 0.5);}

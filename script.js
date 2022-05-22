@@ -234,29 +234,4 @@ var question4;
                         }
                     }
                 }
-
-
-
-            //var squadFinale;
-            /*
-            if(finalAnswers.includes("A", 4)){
-                //squadFinale = "Marksmen";
-                marksmen.style.display = "block";
-            } else if(finalAnswers.includes("B", 4)){
-                //squadFinale = "Guardians";
-                guardians.style.display = "block";
-            } else if(finalAnswers.includes("C", 4)){
-                //squadFinale = "Anti-Armor";
-                antiArmor.style.display = "block";
-            } else if(finalAnswers.includes("A", 1) && finalAnswers.includes("B", 1)){
-                marksmen.style.display = "block";
-                guardians.style.display = "block";
-            }
-*/
-
-
-
-
-
-
         }
