@@ -149,7 +149,7 @@ var question4;
             }
         }
         function answer13Button(){
-            question4 = +"B";
+            question4 = "B";
             if (answer13.style.backgroundColor === "green"){
                 answer13.style.backgroundColor = defaultColor;
             } else {
@@ -187,6 +187,7 @@ var question4;
                                 answer12.style.backgroundColor === "green" ||
                                 answer13.style.backgroundColor === "green" 
                             ){
+                                questions.style.display = "none";
                                 let a = 0;
                                 let b = 0;
                                 let c = 0;
@@ -214,10 +215,21 @@ var question4;
                                     antiArmor.style.display = "block";
                                     questions.style.display = "none";
                                 }
+                                if (a >= 2){
+                                    marksmen.style.display = "block";
+                                }
+                                if (b >= 2){
+                                    guardians.style.display = "block";
+                                }
+                                if (c >= 2){
+                                    antiArmor.style.display = "block";
+                                }
+                                /*
                                 document.getElementById("squadFinalA").innerHTML = a;
                                 document.getElementById("squadFinalB").innerHTML = b;
                                 document.getElementById("squadFinalC").innerHTML = c;
                                 document.getElementById("squadFinalT").innerHTML = finalAnswers;
+                                */
                             }
                         }
                     }
